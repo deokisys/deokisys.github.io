@@ -51,7 +51,7 @@ toc: true
 - 로봇
    - ROS(robot operating system)
 - 딥러닝
-   - caffe
+   - pytorch
 
 ---
 
@@ -100,4 +100,24 @@ Github링크: <https://github.com/deokisys/BSBhj><br>
 
 
 
+### 대회
+
+
+- 대회명 : 재활용 품목 분류를 위한 semantic segementation(부스트 캠프 AI Tech)
+프로젝트 기간 : 2021.04.26 - 2021.05.06
+본인역할 : 성능향상을 위한 기술시도 (psudo labeling)
+내용 : 쓰레기가 포함된 사진으로부터 쓰레기11종류에 대한 영역을 구분하고 검출할 수 있도록 semantic segmentation모델 활용
+Git : https://github.com/bcaitech1/p3-ims-obd-connectnet
+
+- 대회명 : 재활용 품목 분류를 위한 object detection(부스트 캠프 AI Tech)
+프로젝트 기간 : 2021.05.10 - 2021.05.20
+본인역할 : 성능개선을 위한 모델탐색(yolov5), 앙상블 효율을 위해 k-fold로 나눠서 학습
+내용 : 쓰레기가 포함된 사진으로부터 쓰레기11종류에 대한 물체를 탐지하고 구별 할 수 있도록 object detection모델 활용
+Git : https://github.com/bcaitech1/p3-ims-obd-connectnet
+
+- 대회명 : 수식인식(부스트 캠프 AI Tech)
+프로젝트 기간 : 2021.05.24 - 2021.06.15
+본인역할 : 베이스 모델SATRN의 개선, 하이퍼 파라미터 튜닝을 통한 성능 향상 및 위키 작성
+내용 : OCR에 일부인 text recognition으로 잘려진 수식 이미지를 입력을 받아 LaTex형식을 출력하도록 transformer와 lstm기반 모델을 활용.
+Git : https://github.com/bcaitech1/p4-fr-connectnet
 

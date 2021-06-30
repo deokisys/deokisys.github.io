@@ -1,0 +1,44 @@
+title: Suh Jun Bae
+description: 서준배의 메모장
+author: Suh Jun Bae
+avatar: https://avatars1.githubusercontent.com/u/24247768?s=400&u=ce1190f5d7c260befb900056d5e1ef08035cd30c&v=4
+email: sjb378@me.com
+
+url: 'https://deokisys.github.io'
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+
+paginate: 10
+
+# Uncomment the below line and set the tracking ID for enabling Google Analytics
+# 
+google_analytics: G-1RZSQGP4YS
+
+# Uncomment the below lines and set the Disqus shortname for enabling Disqus
+# 
+# disqus:
+
+# Jekyll
+# ======
+exclude:
+  - scripts/
+  - README.md
+  - jekyll-theme-hamilton.gemspec
+
+# Jekyll SEO Tag (Optional)
+# =========================
+twitter:
+  username: sjb378
+  card: summary
+logo: https://avatars1.githubusercontent.com/u/24247768?s=400&u=ce1190f5d7c260befb900056d5e1ef08035cd30c&v=4
+social:
+  name: suh jun bae
+  links:
+    - https://twitter.com/sjb378
+    - 
+    - https://github.com/deokisys
+google_site_verification: 40sWRLdWzcUIXibxvIGreMGcWWTVmPwZogujdOxYD9
+lang: kr

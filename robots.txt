@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://deokisys.github.io/sitemap.xml
+Sitemap: http://deokisys.github.io/sitemap.xml

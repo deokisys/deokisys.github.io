@@ -18,6 +18,11 @@ math : true
   - github action공식 문서와 git에 잘 정리되어있다.
   - 일부 사용법에 대해서는 찾기 편한듯
   - [공식문서](https://docs.github.com/en/actions)
+- github action의 yml관련하여 따로 저장된 market이 존재한다. 예전 블로그에서 소개를 하고 사용하게 된다면, 제작자 페이지로 이동해서 최신 버전을 확인해서 사용하도록 하자.
+  - 최신버전에서 추가 기능이 있거나 버그픽스된 버전이 존재할 수 있기 때문
+  - ![최신버전확인](https://user-images.githubusercontent.com/24247768/146880391-0c1787cf-2f86-4b38-8ee6-cd4437ef5d3c.png)
+  - 우측 상단의 초록 버튼 누르면 바로 확인 가능
+ 
 
 ### 작성 방법
 - git이 설치된 폴더의 root에 `.github/workflows`로 이동 또는 생성

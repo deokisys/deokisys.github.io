@@ -2,7 +2,7 @@
 layout: post
 title: github action쓰기
 categories: 기타개발
-tags: [github,action,CI,CD,secrets,action env]
+tags: [github,action,CI,CD,secrets,action env,action on, action checkout]
 toc : true
 math : true
 ---
@@ -73,7 +73,8 @@ jobs:                                 # Job 설정
       - name: checkout source code    
         uses: actions/checkout@v2  
         with:
-          ref: 'actionTEST'
+          ref: 'actionTEST' # 특정 브랜치, sha로 지정가능
+          # ref: ${{ github.event.pull_request.head.sha }} # pullrequest시의 제일 높은 헤드를 가져온다. = 쉽게 말해 pull request한 시점의 파일을 사용
         
       # node설치 https://github.com/actions/setup-node
       # + node 캐시
@@ -95,6 +96,46 @@ jobs:                                 # Job 설정
 
       - name: yarn build              # 빌드시작
         run: yarn build  
+
+```
+
+### checkout
+- [문서](https://github.com/actions/checkout)참고
+- ref/sha를 통해 특정 지점, 브랜치의 내용을 checkout한다.
+  - 일반적인 checkout으로 생각해도 될듯
+- ${{ github.event.pull_request.head.sha }}로 pull request의 commit을 이용 가능!
+
+### on
+- 이 workflow를 활성시키는 트리거, 행동을 지정
+- [문서](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#on)참고
+- push와 pull_request가 존재하면 배열을 이용해 복수의 트리거를 지정할 수 있다.
+
+```yml
+on: push # push가 일어날때
+
+on: [push, pull_request] # push또는 pull_request가 일어날때
+
+on: 
+  push:
+    branches:
+      - master # master브랜치에 push가 일어날때 활성화
+      - relase/** 
+      - '!release/**-alpha'
+      # **을 이용해 정규식처럼 relase/1 , relase/2/test 와같은 패턴을 가지는 브랜치 지정 가능
+      # !(느낌표)를 이용해 ignore를 지정가능 !release/**-alpha는 규칙을 통해 예 로 relase/10-alpha, relase/beta/12-alpha는 무시된다.
+    tages:
+     - v1 # 태그로 지정가능
+     - v1.* # 태그에도 *가능
+    
+    # 아래와 같이 특정 브랜치,태그는 무시하도록 설정 가능
+    branches-ignore:
+    tags-ignore:
+
+    # 특정 파일도 지정 가능
+    paths:
+      - '**.js'
+    paths-ignore:
+      - '**.md'
 
 ```
 

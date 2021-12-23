@@ -9,7 +9,8 @@ math : true
 
 
 ## action에서 ssh연결
-- 이전에는 ncloud에 연결을 진행
+- [action 기본 참고](https://deokisys.github.io/%EA%B8%B0%ED%83%80%EA%B0%9C%EB%B0%9C/2021/12/20/github-action%EC%93%B0%EA%B8%B0.html)
+- [이전](https://deokisys.github.io/%EA%B8%B0%ED%83%80%EA%B0%9C%EB%B0%9C/2021/12/21/github-action%EA%B3%BC-ncloud.html)에는 ncloud에 연결을 진행
 - ssh로 자신이 가지고있는 서버에 직접 연결하여 파일 옮기는 법 확인
 
 ### ssh 연결(applebody/ssh-action)

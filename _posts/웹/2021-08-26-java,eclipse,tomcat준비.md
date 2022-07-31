@@ -10,12 +10,22 @@ math : true
 
 ## java설치
 - mac기준
-- 8버전이 많이 쓰는거 같음
+- 8버전이 정부 규격이라 한다.
   - [https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
   - 위 링크로 mac운영체제 버전 설치
 
 ### 설치 경로
 - `/Library/Java/JavaVirtualMachines/`로 가면 설치된 버전 확인 가능
+
+### 환경변수 설정
+- 원하는 java버전으로 선택하여 설정가능
+- `~/.bashrc`또는 `~/.zshrc`에 `JAVA_HOME`과 `CLASSPATH`를 추가해준다.
+
+```bash
+# java
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_301.jdk/Contents/Home" # 위에서 찾은 HOME
+export CLASSPATH="/Library/Java/JavaVirtualMachines/jdk1.8.0_301.jdk/Contents/Home/bin" # bin폴더까지 작성
+```
 
 ### 삭제
 - `sudo rm -fr /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin`

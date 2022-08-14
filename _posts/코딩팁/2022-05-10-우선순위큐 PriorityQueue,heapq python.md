@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 우선순위큐 PriorityQueue python
+title: 우선순위큐 PriorityQueue,heapq python
 categories: 코딩테스트
-tags: [코딩테스트, python,우선순위큐,PriorityQueue,팁]
+tags: [코딩테스트, python,우선순위큐,PriorityQueue,heapq,팁]
 toc : true
 math : true
 ---
@@ -10,6 +10,9 @@ math : true
 ## 우선순위큐
 - 큐를 우선순위를 주어 제일 우선순위가 높은 순 으로 꺼낼 수 있다.
 - 파이썬에서 라이브러리로 사용가능
+  - PriorityQueue와 heapq가 존재
+  - heapq를 바로 사용하는 방식이 좀더 빠르다.
+
 
 ## 간단 설명
 
@@ -39,6 +42,15 @@ math : true
   - `TypeError: '<' not supported between instances of 'dict' and 'dict'`
   - dict타입 자체를 입력하면 오류가 나는것으로 보임
   - [https://github.com/aio-libs/janus/issues/199](https://github.com/aio-libs/janus/issues/199)
+
+### heqpq사용법
+- `que = []`
+  - 힙을 저장할 배열 선언
+- `heapq.heappush(que, (d, x, y, wall))`
+  - 값을 넣는부분
+  - 가중치는 맨앞의 요소를 기준으로 정렬된다.
+- `heapq.heappop(que)`
+  - 값을 꺼낸다.
 
 ### 시간 복잡도
 - heap모듈을 사용하여 O(log n)정도를 가진다고 한다.

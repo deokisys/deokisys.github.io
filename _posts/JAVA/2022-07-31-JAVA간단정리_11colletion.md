@@ -60,8 +60,7 @@ toc: true
 
 ### comparator
 - 정렬하는 조건으로 직접 사용한다.
-- new comparator<비교할 객체>(){
-- compare(비교객체 1, 비교객체 2){}//를 오버라이드}
+- `new comparator<비교할 객체>(){compare(비교객체 1, 비교객체 2){}//를 오버라이드}`
 - comparator가 덮어서 사용이 가능
 
 ### 람다식

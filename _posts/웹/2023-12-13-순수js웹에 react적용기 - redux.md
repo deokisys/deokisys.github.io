@@ -63,9 +63,27 @@ export default function harbContent(){
 ```
 
 
-### react를 적용하면서 생긴 문제
+### react로 만들기
 
+- 이런 부분은 react화할때 큰 문제가 없었다.
 
+```js
+
+...
+return (
+  <div className="harb">
+    <div className="harbCount"></div>
+    <HarbController/>
+    <HarbMap />
+  </div>
+);
+
+```
+
+- 위에서 createElement한 그대로 만들어주기만 하면 되었다.
+- 더 생각해야 하는것은 해당 컴포넌트로 인자를 넘기는것은 된다.(부모에서 자식으로 전달 O) 
+- 하지만 해당 컴포넌트에게서 return을 받지 못한다는것이다.(자식에서 부모로 전달 X)
+- 이런 상태 관리 문제가 컸다.
 
 ## 상태 관리 문제
 

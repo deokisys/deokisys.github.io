@@ -8,6 +8,9 @@ math : true
 ---
 
 ## github의 action
+`
+  2023-12-14 문서 수정
+`
 - github에서 제공하는 CI/CD라고 한다.
   - continuous integration(지속적인 통합)/continuous delivery (지속적인 제공,배포)
   - private에서 무료!
@@ -53,7 +56,8 @@ jobs:                                 # Job 설정
     # ubuntu-latest는 ubuntu-20.04가 깔린다고한다[2021,12월 기준]
     # https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#jobsjob_idruns-on
     # 윈도우, 맥도 가능하다고...
-    runs-on: ubuntu-18.04    
+    # 이제 node18 버전은 우분투20부터 사용가능하다고 한다. 간단하게 최신 우분투로 실행하자
+    runs-on: ubuntu-latest
 
     # 해당 build에서 사용하는 환경변수 선언
     env:
@@ -71,7 +75,7 @@ jobs:                                 # Job 설정
     steps:                            # Steps
       # 특정 브랜치의 정보 가져오기(ex actionTEST로 checkout)
       - name: checkout source code    
-        uses: actions/checkout@v2  
+        uses: actions/checkout@v4 # 2023기준 최신 4버전
         with:
           ref: 'actionTEST' # 특정 브랜치, sha로 지정가능
           # ref: ${{ github.event.pull_request.head.sha }} # pullrequest시의 제일 높은 헤드를 가져온다. = 쉽게 말해 pull request한 시점의 파일을 사용
@@ -79,7 +83,7 @@ jobs:                                 # Job 설정
       # node설치 https://github.com/actions/setup-node
       # + node 캐시
       - name: use node version ${{matrix.node-version}} # 노드 버전 설치
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4 # 2023기준 최신 4버전
         with:
           node-version: ${{ matrix.node-version }}
           # setup-node에서 이젠 캐시도 지원 npm, yarn, pnpm(v6.10+)

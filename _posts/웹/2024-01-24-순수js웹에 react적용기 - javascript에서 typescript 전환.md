@@ -12,7 +12,9 @@ math: true
 - 이제는 javascript의 연습도 중요하지만 typescript의 연습도 하기 위해 전환
 - webpack에서 javascript와 react도 설정해보고, 이제는 typescript로 바꾸는것도 연습한다.
 
-## 설치
+## 설정
+
+### 설치
 
 ```
 npm i -D @babel/preset-typescript
@@ -20,10 +22,78 @@ npm i -D @types/react-dom
 
 ```
 
-### 방식
+### 세팅
 
-- 알아보니 두가지 방법이 존재한다.
-- typescript가 자체적으로 바벨과 같은 효과를 가지고,
+- tsconfig.json 생성
+
+```json
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "skipLibCheck": true
+    //https://www.typescriptlang.org/docs/handbook/tsconfig-json.html 를 참고
+  }
+}
+```
+
+- webpack.config.js 수정
+  - 많이는 변경없이 입력, 출력부분에서 약간의 수정이 적용된다.
+  - babel에서 ts를 읽게 하는 설정이라 생각하면 된다.
+
+```js
+module.exports = {
+//entry를 jsx에서 tsx로 수정
+  entry: ["./src/App.tsx", "@babel/polyfill", "./src/sass/main.scss"],
+
+...
+
+  module: {
+    rules: [
+      ...
+      {
+        //tsx와 ts를 추가
+        test: /\.(tsx|ts|js|jsx)$/,
+        exclude: /node_modules/,
+        use: "babel-loader",
+      },
+
+      ...
+
+
+    ]
+  },
+  resolve: {
+    //tsx와 ts를 추가
+    extensions: [".tsx", ".ts", ".jsx", ".js"],
+  },
+
+}
+```
+
+- babel.config.js 수정
+
+```js
+const config = {
+  //@babel/preset-typescript 를 추가
+  presets: ["@babel/preset-react", "@babel/preset-typescript", "@babel/preset-env"],
+  ...
+}
+```
+
+## typescript와 babel
+
+### typescript와 babel
+
+- typescript도 자체적으로 es5를 변환, 바벨도 최신 문법을 es5로 변환한다.
+- 그러면 babel을 안써도 되지 않을까?
+  - 상황에 따라 다르고 사용법도 다르다.
+- babel을 사용하면 다양한 build pipeline설정이 가능하다.
+  - ts에서 지원하지 않은 기능을 설정할 수 있다 한다.
+  - 조금더 속도가 빠르게 컴파일이 된다 한다.
+- 자세한 내용은 [이블로그](https://blog.qvil.dev/typescript/typescript-with-babel)에서 좀더 잘 정리해주셨다.
+
+- 그래서 저는 babel을 설정한 김에 babel과 typescript를 사용하기로 했다.
+  - 후에 babel세팅이나 typescript설정에서 좀더 자유로울거라 판단했고, 실제로 설정이 간단했던게 이유입니다.
 
 ## 에러들
 
@@ -94,6 +164,7 @@ setSrc(imgsvg)
 ## 참고
 
 - [webpack공식](https://webpack.kr/guides/typescript/)
+- [왜 Typescript와 Babel을 함께 사용해야 하는가?](https://blog.qvil.dev/typescript/typescript-with-babel)
 - [webpack typescript](https://velog.io/@jungsangu/Webpack-Babel%EB%A1%9C-React-Typescript-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0)
 - [tsconfig.json에러](https://bny9164.tistory.com/46)
 - [TypeScript가 SVG 파일을 import하지 못하여 에러가 발생할 때](https://tesseractjh.tistory.com/227)

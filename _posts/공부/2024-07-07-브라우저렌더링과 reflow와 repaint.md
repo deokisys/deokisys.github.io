@@ -90,7 +90,8 @@ tag:
 ## 참고
 
 - [understanding-browser-rendering-critical-path-divyansh-singh](https://www.linkedin.com/pulse/)understanding-browser-rendering-critical-path-divyansh-singh/
-- [웹-브라우저의-렌더링Rendering-알아보기](https://velog.io/@timosean/)%EC%9B%B9-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98-%EB%A0%8C%EB%8D%94%EB%A7%81Rendering-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0)
+- [웹-브라우저의-렌더링Rendering-알아보기](https://velog.io/@timosean/%EC%9B%B9-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98-%EB%A0%8C%EB%8D%94%EB%A7%81Rendering-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0)
+- [CSS 애니메이션 성능 개선 방법(reflow 최소화, will-change 사용)](https://wit.nts-corp.com/2017/06/05/4571)
 - [critical-rendering-path](https://cresumerjang.github.io/2019/06/24/critical-rendering-path/)
   - 그림으로 잘 정리해주심
 - [reflow-repaint](https://velog.io/@bcgrhio/Reflow-%EC%99%80-Repaint)

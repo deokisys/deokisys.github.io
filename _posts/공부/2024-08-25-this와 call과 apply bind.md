@@ -203,3 +203,12 @@ function test(a, b) {
 const bindTest = test.bind({ k: 0 }); //this를 고정해서 bindTest라는 함수를 생성
 bindTest(1, 2);
 ```
+
+## 참고
+
+- https://inpa.tistory.com/entry/JS-%F0%9F%93%9A-Call-Bind-Apply#apply
+- https://poiemaweb.com/js-this
+- https://www.zerocho.com/category/JavaScript/post/57433645a48729787807c3fd
+- https://velog.io/@dev_0livia/JavaScriptcall-apply-bind%EC%9D%98-%EC%B0%A8%EC%9D%B4
+- https://klmhyeonwooo.tistory.com/61
+- https://velog.io/@do_dam/JavaScript-%EC%83%9D%EC%84%B1%EC%9E%90-%ED%95%A8%EC%88%98Constructor-function%EC%99%80-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85Prototype

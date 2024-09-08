@@ -3,7 +3,7 @@ layout: post
 title: dependencies와 devDependencies peerDependencies
 categories: 공부
 tag: [dependencies, devDependencies, peerDependencies]
-1toc: true
+toc: true
 ---
 
 # dependencies와 devDependencies peerDependencies

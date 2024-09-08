@@ -3,7 +3,7 @@ layout: post
 title: git의 rebase
 categories: 공부
 tag: [git, rebase]
-1toc: true
+toc: true
 ---
 
 # rebase란?

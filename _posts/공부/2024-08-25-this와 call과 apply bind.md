@@ -3,7 +3,7 @@ layout: post
 title: this와 call과 apply bind
 categories: 공부
 tag: [this, 바인딩, call, apply, bind, javascript]
-1toc: true
+toc: true
 ---
 
 # call apply bind

@@ -4,7 +4,7 @@ title: 브라우저렌더링과 reflow와 repaint
 categories: 공부
 tag:
   [브라우저 렌더링 단계, critical rendering path, CRP, reflow, repaint, 최적화]
-1toc: true
+toc: true
 ---
 
 # reflow와 repaint

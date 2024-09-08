@@ -3,7 +3,7 @@ layout: post
 title: AMD와commonJS그리고ES6
 categories: 공부
 tag: [amd, commonjs, es6, 모듈]
-1toc: true
+toc: true
 ---
 
 # amd, coomonjs, es6

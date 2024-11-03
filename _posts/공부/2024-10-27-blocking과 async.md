@@ -8,7 +8,7 @@ toc: true
 
 # blocking과 async
 
-- 비동기와 blocking에 대해 정리해보자.
+- 비동기와 blocking에 대해 정리해보자
 
 ## blocking/non-blocking
 

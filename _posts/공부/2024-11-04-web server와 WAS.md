@@ -1,6 +1,6 @@
 ---
 layout: post
-title: webserver와 WAS
+title: web server와 WAS
 categories: 공부
 tag: [web server, was, Web Application Server, nginx]
 toc: true

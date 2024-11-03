@@ -1,8 +1,8 @@
 ---
-layout: webserver와 WAS
-title: gg
+layout: post
+title: webserver와 WAS
 categories: 공부
-tag: []
+tag: [web server, was, Web Application Server, nginx]
 toc: true
 ---
 
